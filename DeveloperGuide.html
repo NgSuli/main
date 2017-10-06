@@ -1864,6 +1864,127 @@ for <code>RemarkCommandParser</code>.</p>
 </li>
 </ul>
 </div>
+<h3 id="use-case-find-person" class="discrete">Use case: Find person</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to find person by name</p>
+</li>
+<li>
+<p>AddressBook searches for person with the specified name and displays to user</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. The input name format is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2a. No person with the specified name found.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>2b. Multiple persons whose names contain the same keyword are found.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. AddressBook displays an indexed list of all persons found with the keyword in their names.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-add-tag-to-an-existing-person" class="discrete">Use case: Add tag to an existing person</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User request to find person</p>
+</li>
+<li>
+<p>User request to add a tag to the specified person</p>
+</li>
+<li>
+<p>AddressBook updates the tagList of the person</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. Multiple persons are found.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook displays an indexed list of persons.</p>
+</li>
+<li>
+<p>1a2. User specifies index.</p>
+</li>
+<li>
+<p>1a3. AddressBook checks if the index is valid, if not AddressBook shows an error message and returns to step 1a2.</p>
+</li>
+<li>
+<p>Use case resumes from step 2.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2a. Format of tag provided by user is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. AddressBook shows an error message.</p>
+</li>
+<li>
+<p>Use case resumes from step 2.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. The new tag is the same as an existing tag.</p>
+<div class="paragraph">
+<p>Use cse ends.</p>
+</div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>{More to be added}</p>
 </div>
@@ -1951,7 +2072,7 @@ for <code>RemarkCommandParser</code>.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-05 06:17:47 +00:00
+Last updated 2017-10-06 14:12:31 +00:00
 </div>
 </div>
 </body>
