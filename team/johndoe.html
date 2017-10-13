@@ -37,8 +37,9 @@
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
-Format: <code>undo</code></p>
+<p>Restores the address book to the state before the <em>undoable</em> commands were executed, specified by the the number of commands to undo<br>
+Format: <code>undo [STEPS]</code><br>
+Alternative format: <code>undo all</code>, which undoes all changes made in current session.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -48,7 +49,7 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code>, <code>remark</code> and <code>clear</code>).</p>
 </div>
 </td>
 </tr>
@@ -72,9 +73,16 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </li>
 <li>
 <p><code>delete 1</code><br>
+<code>delete 2</code><br>
+<code>delete 2</code><br>
 <code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<code>undo 2</code> (reverses the 2 delete commands)</p>
+</li>
+<li>
+<p><code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665</code><br>
+<code>delete 1</code><br>
+<code>delete 2</code><br>
+<code>undo all</code> (reverses both delete commands and add command)</p>
 </li>
 </ul>
 </div>
@@ -360,7 +368,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-13 03:51:04 +00:00
+Last updated 2017-10-13 03:52:43 +00:00
 </div>
 </div>
 </body>
