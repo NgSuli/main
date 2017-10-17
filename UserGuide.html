@@ -5,20 +5,23 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>AddressBook Level 4 - User Guide</title>
+<title>Contact+ Pro - User Guide</title>
 <link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>AddressBook Level 4 - User Guide</h1>
+<h1>Contact+ Pro - User Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Team T14-B4</code></p>
+</div>
+<div class="paragraph">
+<p>The App is developer based on address-book level 4 by team <code>See-du</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -72,7 +75,7 @@ This app will not work with earlier versions of Java 8.
 </div>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/se-edu/addressbook-level4/releases">here</a>.</p>
+<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/CS2103AUG2017-T14-B4/main/releases">here</a>.</p>
 </li>
 <li>
 <p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
@@ -234,7 +237,8 @@ Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all 
 <div class="sect2">
 <h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">2.5. Locating persons by name: <code>find</code></a></h3>
 <div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
+<p>*Unrestricted search
+Finds persons whose names, addresses, phones, emails or tags contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 </div>
 <div class="sidebarblock">
@@ -246,9 +250,6 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 </li>
 <li>
 <p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
-</li>
-<li>
-<p>Only the name is searched.</p>
 </li>
 <li>
 <p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
@@ -272,6 +273,42 @@ Returns <code>john</code> and <code>John Doe</code></p>
 <li>
 <p><code>find Betsy Tim John</code><br>
 Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>*Restricted search
+Finds persons with one of the attributes: names, addresses, phones, emails or tags<br>
+contains any of the given keywords.<br>
+Format: <code>find [PREFIX/KEYWORD]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+</li>
+<li>
+<p>If multiple prefixes are provided, the search will only search based on the search term<br>
+with highest priority in the order: name &gt; phone &gt; address &gt; email &gt; tag</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find n/John</code><br>
+Returns <code>john</code> and <code>John Doe</code></p>
+</li>
+<li>
+<p><code>find t/cs2103</code><br>
+Returns any person having tags <code>cs2103</code></p>
 </li>
 </ul>
 </div>
@@ -618,7 +655,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-16 03:44:29 +00:00
+Last updated 2017-10-17 14:18:47 +00:00
 </div>
 </div>
 </body>
