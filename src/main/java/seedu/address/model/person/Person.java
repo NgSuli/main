@@ -199,13 +199,13 @@ public class Person implements ReadOnlyPerson {
      */
     public void resetData(ReadOnlyPerson replacement) {
         requireNonNull(replacement);
-
         this.setName(replacement.getName());
         this.setPhone(replacement.getPhone());
         this.setEmail(replacement.getEmail());
         this.setAddress(replacement.getAddress());
         this.setBirthday(replacement.getBirthday());
         this.setRemark(replacement.getRemark());
+        this.setFavorite(replacement.getFavorite());
         this.setTags(replacement.getTags());
     }
 

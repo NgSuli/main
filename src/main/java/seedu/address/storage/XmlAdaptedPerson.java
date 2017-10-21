@@ -61,7 +61,7 @@ public class XmlAdaptedPerson {
         address = source.getAddress().value;
         birthday = source.getBirthday().value;
         remark = source.getRemark().remark;
-        favorite = source.getFavorite().getFavorite();
+        favorite = source.getFavorite().favorite;
         tagged = new ArrayList<>();
         for (Tag tag : source.getTags()) {
             tagged.add(new XmlAdaptedTag(tag));
