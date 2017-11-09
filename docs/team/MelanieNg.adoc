@@ -17,7 +17,7 @@ This address book help ease communications among students, be it with new classm
 ---
 #Start of Extract [from: User Guide]#
 
-include::../UserGuide.adoc[tag=BirthdayDetail]
+include::../UserGuide.adoc[]
 
 #End of Extract#
 
@@ -37,7 +37,7 @@ Implementing the white theme offers a cleaner option for users to use.
 ---
 #Start of Extract [from: Developer Guide]#
 
-include::../DeveloperGuide.adoc[tag=Birthday Detail]
+include::../DeveloperGuide.adoc[tag=birthday]
 
 #End of Extract#
 
