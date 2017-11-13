@@ -625,13 +625,13 @@ Format: b/[dd/mm/yyyy]
 See this http://github.com/NgSuli/main[PR] for the full solution.
 
 ==== Design Considerations
-**Aspect:** Should this be an optional attribute instead?
-**Alternative 1(current choice):** It is easier to implement it as an compulsory field.
-**Pros:** Adding the birthday details makes the AddressBook more personal.
-**Cons:** Users have no choice but to key in the birthday detail.
-**Alternative 2:** Make the birthday attribute optional.
-**Pros:** Allows the user freedom to decide what they want in the addressbook.
-**Cons:** Slightly more tedious to implement.
+**Aspect:** Should this be an optional attribute instead? +
+**Alternative 1(current choice):** It is easier to implement it as an compulsory field. +
+**Pros:** Adding the birthday details makes the AddressBook more personal. +
+**Cons:** Users have no choice but to key in the birthday detail. +
+**Alternative 2:** Make the birthday attribute optional. +
+**Pros:** Allows the user freedom to decide what they want in the addressbook. +
+**Cons:** Slightly more tedious to implement. +
 
 // end::birthday[]
 
